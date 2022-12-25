@@ -1,0 +1,16 @@
+[{
+ $match: {
+  positionText: {
+   $eq: 'Forward'
+  }
+ }
+}, {
+ $group: {
+  _id: '$teamName',
+  NumOfYellowCard: {
+   $sum: '$yellowCard'
+  }
+ }
+}, {
+ $out: 'ForwardYellowCardByTeam'
+}]

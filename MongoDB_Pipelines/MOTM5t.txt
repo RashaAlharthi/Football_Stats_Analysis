@@ -1,0 +1,9 @@
+[{
+ $match: {
+  manOfTheMatch: {
+   $gte: 5
+  }
+ }
+}, {
+ $out: 'MOTM5t'
+}]

@@ -1,0 +1,15 @@
+[{
+ $match: {
+  goal: {
+   $gte: 7
+  }
+ }
+}, {
+ $sort: {
+  age: 1
+ }
+}, {
+ $limit: 20
+}, {
+ $out: 'YoungestByScored'
+}]

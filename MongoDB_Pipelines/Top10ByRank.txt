@@ -1,0 +1,16 @@
+[{
+ $group: {
+  _id: '$name',
+  TopRank: {
+   $sum: '$ranking'
+  }
+ }
+}, {
+ $sort: {
+  TopRank: 1
+ }
+}, {
+ $limit: 10
+}, {
+ $out: 'Top10ByRank'
+}]

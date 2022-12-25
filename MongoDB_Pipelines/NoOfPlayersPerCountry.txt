@@ -1,0 +1,14 @@
+[{
+ $project: {
+  _id: 0
+ }
+}, {
+ $group: {
+  _id: '$originCountry',
+  NoOfPlayer: {
+   $count: {}
+  }
+ }
+}, {
+ $out: 'NoOfPlayersPerCountry'
+}]
